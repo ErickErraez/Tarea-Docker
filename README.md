@@ -1,6 +1,6 @@
 # Image Analyzer
 
-Este proyecto es una aplicación que utiliza Docker para analizar imágenes.
+Este proyecto es una aplicación que utiliza Docker para almacenar una aplicacion capaz de analizar imágenes.
 
 ## Requisitos
 
