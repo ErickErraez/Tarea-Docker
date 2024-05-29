@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Analysis Results</title>
+</head>
+<body>
+  <h1>Analysis Results</h1>
+  <div class="images-container">
+  <% results.forEach(result => { %>
+<div class="image-result">
+      <img src="<%= result.image %>" alt="Analyzed Image" width="300">
+      <ul>
+        <% result.tags.forEach(tag => { %>
+          <li><%= tag.tag.en %> - <%= tag.confidence %> %</li>
+        <% }); %>
+      </ul>
+    </div>
+  <% }); %>
+</div>
+  <a href="/">Back</a>
+</body>
+</html>

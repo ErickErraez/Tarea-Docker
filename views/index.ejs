@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Analyzer</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .loading {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Analyzer</h1>
+  <form id="initial-form" action="/analyze" method="POST" onsubmit="showLoading()">
+    <div class="images-container">
+      <% images.forEach((image, index) => { %>
+        <img src="<%= image %>" alt="Image <%= index + 1 %>" width="300">
+      <% }); %>
+    </div>
+    <button type="submit">Analyze</button>
+  </form>
+  <div class="loading" id="loading">
+    <div class='pac-man' />
+</div>
+
+  <script>
+    function showLoading() {
+        console.log('EMPEZO')
+      document.getElementById('loading').style.display = 'block';
+      document.getElementById('initial-form').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
