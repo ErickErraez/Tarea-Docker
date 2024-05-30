@@ -22,3 +22,9 @@ Para levantar la imagen Docker del proyecto, utiliza el siguiente comando:
 ```sh
 docker run -p 3000:3000 image-analyzer 
 ```
+
+## Acceder a la Aplicación
+
+```sh
+http://localhost:3000
+```
